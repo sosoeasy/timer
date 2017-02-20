@@ -1,0 +1,40 @@
+<!--pages/one/frist.wxml-->
+<view class="title" bindtap="showActionSheet">
+   <text class="pull-left">{{"<<"}}</text>{{title}}<text class="pull-right">{{">>"}}</text>
+</view>
+
+<view class="time">
+    <view>
+    <view class="bigCircle blue2">
+        </view>
+        <view class="bigCircle blue1 right" animation="{{leftAnimationData}}">
+        </view>
+        <view class="circle white">
+            <view>{{leftTime}}s</view>
+        </view>
+    </view>
+   
+    <view class="rightCircle">
+     <view class="bigCircle blue2">
+    </view>
+    <view class="bigCircle blue1 right" animation="{{rightAnimationData}}">
+    </view>
+    <view class="circle white">
+        <view>{{rightTime}}s</view>
+    </view>
+   </view>
+   
+</view>
+
+
+<view class="timeBtn">
+    <button class="btn" bindtap="leftStart"> 正方发言 </button>
+    <button class="btn" bindtap="rightStart"> 反方发言 </button>
+</view>
+
+<view class="desc">
+    <text>{{desc}}
+    </text>
+</view>
+
+<audio src="{{src}}" id="myAudio" loop></audio>
